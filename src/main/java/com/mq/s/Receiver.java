@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Receiver {
 
-  @JmsListener(destination = "${ibm.queue.name}")
+  @JmsListener(destination = "${ibm.topic.name}")
   public void receiveMessage(List<SubscriberPerson> persons) throws JMSException {   
    
     for(SubscriberPerson person: persons)
